@@ -76,6 +76,9 @@ send.addEventListener('click', () => {
         setTimeout(() => {
             rem(thank_you);
         }, delay);
+        sender_name.value = "";
+        sender_email.value = "";
+        msg_value.value = "";
     }
 });
 
