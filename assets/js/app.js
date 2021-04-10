@@ -56,6 +56,15 @@ function ValidateMsg(msg) {
     return false;
 }
 
+function randomString() {
+    var len = Math.random()+"";
+    var str = "";
+    for(var i=0;i<len.length;i++) {
+        if(len[i]!='.') str+=len[i];
+    }
+    return str;
+}
+
 send.addEventListener('click', () => {  
     var delay = 2000;
     var email_ok = validateEmail(sender_email?.value), msg_ok = ValidateMsg(msg_value?.value), name_ok = ValidateMsg(sender_name?.value);
@@ -76,7 +85,9 @@ send.addEventListener('click', () => {
             rem(invalid_msg);
         }, delay);
     } else {
-        firebase.database().ref("User").set({
+        var path = randomString();
+        console.log(path);
+        firebase.database().ref(path).set({
             name: sender_name?.value,
             email: sender_email?.value, 
             message: msg_value?.value
