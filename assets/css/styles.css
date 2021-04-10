@@ -446,6 +446,21 @@ img{
   z-index: 1000;
   box-shadow: 0 0 20px black;
 }
+.name-alert-box {
+  width: 430px;
+  height: 100px;
+  overflow: hidden;
+  display: none;
+  position: fixed;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: white;
+  border-radius: 20px;
+  z-index: 1000;
+  box-shadow: 0 0 20px black;
+}
 
 
 .icon-ac {
@@ -465,6 +480,8 @@ img{
 .error {
   color: rgb(160, 18, 18);
 }
+
+
 
 /* ===== CONTACT =====*/
 .contact__input{
@@ -495,8 +512,12 @@ img{
   padding: 2rem 0;
 }
 .footer__title{
-  font-size: 2rem;
+  font-size: 1rem;
   margin-bottom: var(--mb-4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
 }
 .footer__social{
   margin-bottom: var(--mb-4);
@@ -593,3 +614,4 @@ img{
     right: 10%;
   }
 }
+
